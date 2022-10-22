@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun FinishImage() {
-    val finishedImage = painterResource(id = R.drawable.ic_launcher_background)
+    val finishedImage = painterResource(id = R.drawable.ic_task_completed)
     Image(
         painter = finishedImage,
         contentDescription = null,
