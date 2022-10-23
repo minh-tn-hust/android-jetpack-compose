@@ -38,13 +38,21 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Quadrant(title: String, content: String, colorBackground: Color) {
+private fun Quadrant(
+    title: String,
+    content: String,
+    colorBackground: Color,
+    modifier: Modifier = Modifier) {
     Box(
-        modifier = Modifier.background(colorBackground).fillMaxWidth(fraction = 0.5f).fillMaxHeight()
+        modifier = modifier
+            .background(colorBackground)
+            .fillMaxHeight()
     ) {
         Column(
             modifier = Modifier
-                .padding(all = 16.dp).fillMaxHeight().fillMaxWidth(),
+                .padding(all = 16.dp)
+                .fillMaxHeight()
+                .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
@@ -64,34 +72,45 @@ fun Quadrant(title: String, content: String, colorBackground: Color) {
 @Composable
 fun ComposeQuadrant() {
     Column(
-        modifier = Modifier.fillMaxWidth().fillMaxHeight().background(Color.Magenta)
+        modifier = Modifier
+            .fillMaxWidth()
+            .fillMaxHeight()
+            .background(Color.Magenta)
     ) {
         Row(
-            modifier = Modifier.weight(weight = 1f, fill = true).fillMaxHeight()
+            modifier = Modifier
+                .weight(weight = 1f, fill = true)
+                .fillMaxHeight()
         ) {
             Quadrant(
                 title = stringResource(R.string.quadrant1st_title),
                 content = stringResource(R.string.quadrant1st_content),
-                colorBackground = Color.Green
+                colorBackground = Color.Green,
+                modifier = Modifier.weight(1f)
             )
             Quadrant(
                 title = stringResource(R.string.quadrant2nd_title),
                 content = stringResource(R.string.quadrant2nd_content),
-                colorBackground = Color.Yellow
+                colorBackground = Color.Yellow,
+                modifier = Modifier.weight(1f)
             )
         }
         Row(
-            modifier = Modifier.weight(weight = 1f, fill = true).fillMaxHeight()
+            modifier = Modifier
+                .weight(weight = 1f, fill = true)
+                .fillMaxHeight()
         ) {
             Quadrant(
                 title = stringResource(R.string.quadrant3rd_title),
                 content = stringResource(R.string.quadrant3rd_content),
                 colorBackground = Color.Cyan,
+                modifier = Modifier.weight(1f)
             )
             Quadrant(
                 title = stringResource(R.string.quadrant4th_title),
                 content = stringResource(R.string.quadrant4th_content),
-                colorBackground = Color.LightGray
+                colorBackground = Color.LightGray,
+                modifier = Modifier.weight(1f)
             )
         }
     }
