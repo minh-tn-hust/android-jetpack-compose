@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Learn Together</string>
+    <string name="quadrant1st_title">Text composable</string>
+    <string name="quadrant1st_content">Displays text and follows Material Design guidelines.</string>
+    <string name="quadrant2nd_title">Image composable</string>
+    <string name="quadrant2nd_content">Creates a composable that lays out and draws a given Painter class object.</string>
+    <string name="quadrant3rd_title">Row composable</string>
+    <string name="quadrant3rd_content">A layout composable that places its children in a horizontal sequence.</string>
+    <string name="quadrant4th_title">Column composable</string>
+    <string name="quadrant4th_content">A layout composable that places its children in a vertical sequence.</string>
 </resources>
